@@ -100,13 +100,12 @@
 | :---: | :---: | :---: |
 | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/setting.jpg" width="220" alt="Settings 1"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/setting2.jpg" width="220" alt="Settings 2"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/privacy_setting.jpg" width="220" alt="Privacy Settings"> |
 
----
+### 📬 Liên Hệ (Contact Me)
 
-### 📦 Cài Đặt Dự Án (Installation & Setup)
-
-Để chạy thử nghiệm hoặc phát triển tiếp dự án này trên máy cục bộ của bạn, hãy làm theo các bước sau:
-
-1. **Clone repository này về máy:**
-```bash
+Nếu bạn có bất kỳ câu hỏi, góp ý hay ý tưởng hợp tác phát triển ứng dụng, vui lòng liên hệ qua:
+- **Email:** [duymanhbui305@gmail.com](mailto:duymanhbui305@gmail.com)
+- **GitHub:** [https://github.com/dmanhz06](https://github.com/dmanhz06)
+- **Repository Link:** [https://github.com/dmanhz06/Dmanhz_Social_App](https://github.com/dmanhz06/Dmanhz_Social_App)
    git clone [https://github.com/dmanhz06/Dmanhz_Social_App.git](https://github.com/dmanhz06/Dmanhz_Social_App.git)
    cd Dmanhz_Social_App
+---
