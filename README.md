@@ -51,19 +51,18 @@
 
 | Màn hình Đăng ký | Màn hình Đăng nhập |
 | :---: | :---: |
-| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/signup.png" width="260" alt="Sign Up"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/login.png" width="260" alt="Log In"> |
+| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/signup.png" width="250" alt="Sign Up"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/login.png" width="250" alt="Log In"> |
 
 #### 🌐 2. Trang Chủ & Bảng Tin Tương Tác (Home & Feeds)
-*Nơi cập nhật dòng trạng thái, chia sẻ hình ảnh, tải đa phương tiện và không gian tương tác bình luận của cộng đồng.*
+*Nơi cập nhật dòng trạng thái, chia sẻ hình ảnh, tải đa phương tiện và hệ thống thông báo.*
 
 | Trang chủ (Home) | Bảng tin (Feeds 1) | Bảng tin (Feeds 2) |
 | :---: | :---: | :---: |
 | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/home.jpg" width="220" alt="Home"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/feeds1.jpg" width="220" alt="Feeds 1"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/feeds2.jpg" width="220" alt="Feeds 2"> |
 
 | Tương tác bình luận | Tải ảnh từ bài đăng | Thông báo đẩy (Push) |
-| :---: | :---: |
-| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/comment_feeds.jpg" width="220" alt="Comment"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/download_img_feeds2.jpg" width="220" alt="Download Media"> |
-| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/push_notifi.jpg" width="220" alt="Push Notification"> |
+| :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/comment_feeds.jpg" width="220" alt="Comment"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/download_img_feeds2.jpg" width="220" alt="Download Media"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/push_notifi.jpg" width="220" alt="Push Notification"> |
 
 #### 🎵 3. Góc Tâm Trạng & Âm Nhạc (Music & Journal)
 *Không gian thư giãn kết hợp trình phát nhạc trực tuyến và trình quản lý nhật ký cảm xúc theo hai chế độ giao diện sáng/tối.*
@@ -79,16 +78,16 @@
 | :---: | :---: | :---: | :---: |
 | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/start_mic.jpg" width="180" alt="Start Mic"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/record_mic.jpg" width="180" alt="Recording"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/nhan_mic.jpg" width="180" alt="Action Mic"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/send_mic.jpg" width="180" alt="Send Success"> |
 
-#### 💬 5. Trò Chuyện Thời Gian Thực & Thông Báo (Realtime Chat & Notifications)
-*Hệ thống tin nhắn tức thời, quản lý cuộc hội thoại, xem thông tin bạn bè và trung tâm nhận thông báo đẩy.*
+#### 💬 5. Trò Chuyện Thời Gian Thực & Tương Tác Bạn Bè (Realtime Chat & Community)
+*Hệ thống tin nhắn tức thời, quản lý cuộc hội thoại, xem thông tin bạn bè và thả cảm xúc tin nhắn.*
 
 | Danh sách cuộc trò chuyện | Hộp thoại nhắn tin 1 | Hộp thoại nhắn tin 2 |
 | :---: | :---: | :---: |
 | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat_all.jpg" width="220" alt="Chat List"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat1.jpg" width="220" alt="Chat 1"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat2.jpg" width="220" alt="Chat 2"> |
 
-| Tùy chọn cuộc trò chuyện | Hồ sơ bạn bè (Other Profile) | Thả cảm xúc (emote) |
+| Tùy chọn cuộc trò chuyện | Hồ sơ bạn bè (Other Profile) | Thả cảm xúc (Emote) |
 | :---: | :---: | :---: |
-| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/user_chat.jpg" width="220" alt="User Chat Ops"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/other_profile.jpg" width="220" alt="Other Profile"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/emote.jpg" width="220" alt="emote"> |
+| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/user_chat.jpg" width="220" alt="User Chat Ops"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/other_profile.jpg" width="220" alt="Other Profile"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/emote.jpg" width="220" alt="Emote Chat"> |
 
 #### ⚙️ 6. Quản Lý Tài Khoản & Cài Đặt (Profile & Settings)
 *Thiết lập thông tin cá nhân, liên kết mạng xã hội, tùy chỉnh Theme (Dark Mode) và bảo mật quyền riêng tư.*
