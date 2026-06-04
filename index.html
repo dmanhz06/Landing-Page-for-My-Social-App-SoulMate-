@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoulMate - Mobile Social Network</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         tailwind.config = {
@@ -39,24 +36,24 @@
         .glass-card { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .gradient-text { background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        /* Hiệu ứng scroll-snap cho slider mượt mà */
-        .snap-inline { scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
-        .snap-item { scroll-snap-align: start; }
+        /* Hiệu ứng cuộn snap mượt mà, tối ưu snap-center cho mobile */
+        .snap-inline { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+        .snap-item { scroll-snap-align: center; }
+        @media (min-width: 640px) {
+            .snap-item { scroll-snap-align: start; }
+        }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="antialiased min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
 
-    <!-- BACKGROUND GLOWS -->
     <div class="fixed top-0 left-1/4 w-72 md:w-96 h-72 md:h-96 bg-brand-600/10 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="fixed bottom-10 right-1/4 w-72 md:w-96 h-72 md:h-96 bg-pink-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <!-- NAVBAR -->
     <nav class="sticky top-0 z-40 w-full glass-card border-b border-white/5 backdrop-blur-md transition-all">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 group cursor-pointer">
-                <!-- App Icon -->
                 <div class="w-10 h-10 bg-brand-600 rounded-xl overflow-hidden shadow-lg shadow-brand-500/20 transform group-hover:scale-105 transition-transform flex items-center justify-center">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" class="w-12 h-12 object-cover scale-125" alt="SoulMate Icon">
                 </div>
@@ -72,7 +69,6 @@
                 </a>
             </div>
 
-            <!-- GitHub Button Top Right (Responsive) -->
             <div class="flex items-center gap-2">
                 <a href="https://github.com/dmanhz06" target="_blank" class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" class="w-5 h-5 object-contain invert" alt="GitHub">
@@ -81,9 +77,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <header class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 pb-12 text-center z-10">
-        <!-- Badge kèm Logo App thu nhỏ -->
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold mb-6 tracking-wide uppercase">
             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" class="w-4 h-4 object-cover rounded" alt="Mini Icon">
             <span>Dmanhz Social App</span>
@@ -95,7 +89,6 @@
             Kết hợp độc đáo giữa việc kết nối cộng đồng, không gian nghe nhạc thư giãn và góc viết nhật ký chia sẻ cảm xúc cá nhân bằng giọng nói thời gian thực.
         </p>
         
-        <!-- BADGES -->
         <div class="flex flex-wrap justify-center gap-3 max-w-xl mx-auto">
             <span class="px-4 py-2 rounded-xl bg-[#3DDC84]/10 border border-[#3DDC84]/20 text-[#3DDC84] text-xs font-bold flex items-center gap-2">
                 <i data-lucide="android" class="w-4 h-4"></i> Android Platform
@@ -109,7 +102,6 @@
         </div>
     </header>
 
-    <!-- TÍNH NĂNG NỔI BẬT -->
     <section id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 scroll-mt-24">
         <div class="text-center mb-12">
             <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">🚀 Tính Năng Nổi Bật</h2>
@@ -162,7 +154,6 @@
         </div>
     </section>
 
-    <!-- TECH STACK -->
     <section id="techstack" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 scroll-mt-24">
         <div class="glass-card rounded-3xl p-6 sm:p-12 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl"></div>
@@ -196,13 +187,11 @@
         </div>
     </section>
 
-    <!-- SCREENSHOTS GALLERY WITH PHONE MOCKUP SLIDER -->
     <section id="screenshots" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 scroll-mt-24 relative">
         <div class="text-center mb-10">
             <h2 class="text-2xl sm:text-4xl font-bold text-white mb-2">📸 Giao Diện Ứng Dụng</h2>
             <p class="text-gray-400 text-xs sm:text-sm mb-6">Lướt qua trái/phải hoặc click nút điều hướng để khám phá tính năng</p>
             
-            <!-- Category Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto px-4 overflow-x-auto no-scrollbar py-2">
                 <button onclick="filterAndScroll('all')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-brand-500 text-white shadow-lg" id="btn-all">Tất cả</button>
                 <button onclick="filterAndScroll('auth')" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white/5 text-gray-400 hover:text-white" id="btn-auth">Xác thực</button>
@@ -214,430 +203,327 @@
             </div>
         </div>
 
-        <!-- CONTAINER SLIDER CHÍNH -->
-        <div class="relative px-4 sm:px-12 group/slider">
+        <div class="relative px-2 sm:px-12 group/slider">
             
-            <!-- NÚT ĐIỀU HƯỚNG TRÁI / PHẢI -->
-            <button onclick="scrollSlider(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-gray-900/80 hover:bg-brand-600 text-white flex items-center justify-center border border-white/10 shadow-xl transition-all opacity-100 sm:opacity-0 group-hover/slider:opacity-100">
+            <button onclick="scrollSlider(-1)" class="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-gray-900/80 hover:bg-brand-600 text-white items-center justify-center border border-white/10 shadow-xl transition-all opacity-0 group-hover/slider:opacity-100">
                 <i data-lucide="chevron-left" class="w-6 h-6"></i>
             </button>
-            <button onclick="scrollSlider(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-gray-900/80 hover:bg-brand-600 text-white flex items-center justify-center border border-white/10 shadow-xl transition-all opacity-100 sm:opacity-0 group-hover/slider:opacity-100">
+            <button onclick="scrollSlider(1)" class="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-gray-900/80 hover:bg-brand-600 text-white items-center justify-center border border-white/10 shadow-xl transition-all opacity-0 group-hover/slider:opacity-100">
                 <i data-lucide="chevron-right" class="w-6 h-6"></i>
             </button>
 
-            <!-- KHUNG VIEWPORT CHỨA DANH SÁCH ĐIỆN THOẠI (Hỗ trợ kéo thả / Swipe) -->
-            <div id="phone-slider" class="flex gap-6 overflow-x-auto snap-inline no-scrollbar py-6 scroll-smooth px-2">
+            <div id="phone-slider" class="flex gap-4 sm:gap-6 overflow-x-auto snap-inline no-scrollbar py-6 px-4 sm:px-2">
                 
-                <!-- THIẾT BỊ 1: ĐĂNG KÝ (Auth) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="auth">
-                    <!-- KHUNG ĐIỆN THOẠI DÀI CHUẨN ĐẸP -->
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <!-- Notch điện thoại -->
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20 flex items-center justify-center"><div class="w-3 h-3 rounded-full bg-black/40"></div></div>
-                        <!-- Màn hình bên trong -->
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="auth">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20 flex items-center justify-center"><div class="w-2.5 h-2.5 rounded-full bg-black/40"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/signup.png" class="w-full h-full object-cover" alt="Màn hình Đăng ký">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Màn hình Đăng ký</p>
                 </div>
 
-                <!-- THIẾT BỊ 2: ĐĂNG NHẬP (Auth) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="auth">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="auth">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/login.png" class="w-full h-full object-cover" alt="Màn hình Đăng nhập">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Màn hình Đăng nhập</p>
                 </div>
 
-                <!-- THIẾT BỊ 3: TRANG CHỦ (Home) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="home">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="home">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/home.jpg" class="w-full h-full object-cover" alt="Trang chủ (Home)">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Trang chủ (Home)</p>
                 </div>
 
-                <!-- THIẾT BỊ 4: FEEDS 1 (Home) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="home">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="home">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/feeds1.jpg" class="w-full h-full object-cover" alt="Bảng tin (Feeds 1)">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Bảng tin (Feeds 1)</p>
                 </div>
 
-                <!-- THIẾT BỊ 5: FEEDS 2 (Home) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="home">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="home">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/feeds2.jpg" class="w-full h-full object-cover" alt="Bảng tin (Feeds 2)">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Bảng tin (Feeds 2)</p>
                 </div>
 
-                <!-- THIẾT BỊ 6: COMMENT (Home) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="home">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="home">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/comment_feeds.jpg" class="w-full h-full object-cover" alt="Tương tác bình luận">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Tương tác bình luận</p>
                 </div>
 
-                <!-- THIẾT BỊ 7: DOWNLOAD MEDIA (Home) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="home">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="home">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/download_img_feeds2.jpg" class="w-full h-full object-cover" alt="Tải ảnh bài đăng">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Tải ảnh bài đăng</p>
                 </div>
 
-                <!-- THIẾT BỊ 8: PUSH NOTIFICATION (Home) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="home">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="home">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/push_notifi.jpg" class="w-full h-full object-cover" alt="Thông báo đẩy">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Thông báo đẩy</p>
                 </div>
 
-                <!-- THIẾT BỊ 9: MUSIC PLAYER (Music) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="music">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="music">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/music.jpg" class="w-full h-full object-cover" alt="Trình phát nhạc">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Trình phát nhạc</p>
                 </div>
 
-                <!-- THIẾT BỊ 10: WRITE JOURNAL (Music) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="music">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="music">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/nhatky.jpg" class="w-full h-full object-cover" alt="Viết nhật ký mới">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Viết nhật ký mới</p>
                 </div>
 
-                <!-- THIẾT BỊ 11: DARK JOURNAL (Music) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="music">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="music">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_darkmode.jpg" class="w-full h-full object-cover" alt="Nhật ký (Chế độ Tối)">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Nhật ký (Chế độ Tối)</p>
                 </div>
 
-                <!-- THIẾT BỊ 12: LIGHT JOURNAL (Music) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="music">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="music">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_lightmode.jpg" class="w-full h-full object-cover" alt="Nhật ký (Chế độ Sáng)">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Nhật ký (Chế độ Sáng)</p>
                 </div>
 
-                <!-- THIẾT BỊ 13: MIC START (Audio) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="audio">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="audio">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/start_mic.jpg" class="w-full h-full object-cover" alt="Giao diện sẵn sàng">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Giao diện Sẵn sàng</p>
                 </div>
 
-                <!-- THIẾT BỊ 14: MIC LIVE (Audio) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="audio">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="audio">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
                             <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/record_mic.jpg" class="w-full h-full object-cover" alt="Đang Ghi âm (Live)">
                         </div>
                     </div>
                     <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Đang Ghi âm (Live)</p>
                 </div>
 
-                <!-- THIẾT BỊ 15: MIC ACTION (Audio) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="audio">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/nhan_mic.jpg" class="w-full h-full object-cover" alt="Nhấn/Vuốt gửi dữ liệu">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="audio">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
+                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/save_voice_diary.jpg" class="w-full h-full object-cover" alt="Xử lý / Lưu trữ">
                         </div>
                     </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Nhấn/Vuốt gửi dữ liệu</p>
+                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Xử lý / Lưu trữ</p>
                 </div>
 
-                <!-- THIẾT BỊ 16: MIC SUCCESS (Audio) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="audio">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/send_mic.jpg" class="w-full h-full object-cover" alt="Đồng bộ thành công">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="chat">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
+                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/list_chat.jpg" class="w-full h-full object-cover" alt="Danh sách Trò chuyện">
                         </div>
                     </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Đồng bộ thành công</p>
+                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Danh sách Trò chuyện</p>
                 </div>
 
-                <!-- THIẾT BỊ 17: CHAT ALL (Chat) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="chat">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat_all.jpg" class="w-full h-full object-cover" alt="Danh sách cuộc trò chuyện">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="chat">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
+                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/detail_chat.jpg" class="w-full h-full object-cover" alt="Nội dung nhắn tin">
                         </div>
                     </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Danh sách cuộc trò chuyện</p>
+                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Nội dung nhắn tin</p>
                 </div>
 
-                <!-- THIẾT BỊ 18: CHAT 1 (Chat) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="chat">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat1.jpg" class="w-full h-full object-cover" alt="Hộp thoại nhắn tin 1">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="chat">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
+                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/action_chat.jpg" class="w-full h-full object-cover" alt="Tương tác tin nhắn">
                         </div>
                     </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Hộp thoại nhắn tin 1</p>
+                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Tương tác tin nhắn</p>
                 </div>
 
-                <!-- THIẾT BỊ 19: CHAT 2 (Chat) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="chat">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat2.jpg" class="w-full h-full object-cover" alt="Hộp thoại nhắn tin 2">
+                <div class="gallery-item snap-item shrink-0 w-[260px] sm:w-[290px]" data-category="profile">
+                    <div class="w-full bg-[#1e2538] p-3 sm:p-3.5 rounded-[40px] sm:rounded-[46px] border-[4px] sm:border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-24 sm:w-28 h-3.5 sm:h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-2.5 h-2.5 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
+                        <div class="w-full h-full rounded-[28px] sm:rounded-[34px] overflow-hidden bg-black relative z-10">
+                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/settings.jpg" class="w-full h-full object-cover" alt="Cài đặt hệ thống">
                         </div>
                     </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Hộp thoại nhắn tin 2</p>
-                </div>
-
-                <!-- THIẾT BỊ 20: CHAT OPTIONS (Chat) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="chat">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/user_chat.jpg" class="w-full h-full object-cover" alt="Tùy chọn cuộc trò chuyện">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Tùy chọn cuộc trò chuyện</p>
-                </div>
-
-                <!-- THIẾT BỊ 21: OTHER PROFILE (Chat) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="chat">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/other_profile.jpg" class="w-full h-full object-cover" alt="Hồ sơ bạn bè">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Hồ sơ bạn bè</p>
-                </div>
-
-                <!-- THIẾT BỊ 22: EMOTE (Chat) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="chat">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/emote.jpg" class="w-full h-full object-cover" alt="Thả cảm xúc (Emote)">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Thả cảm xúc (Emote)</p>
-                </div>
-
-                <!-- THIẾT BỊ 23: USER PROFILE (Profile) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="profile">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/user_profile.jpg" class="w-full h-full object-cover" alt="Trang cá nhân">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Trang cá nhân</p>
-                </div>
-
-                <!-- THIẾT BỊ 24: EDIT 1 (Profile) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="profile">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_profile.jpg" class="w-full h-full object-cover" alt="Chỉnh sửa hồ sơ 1">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Chỉnh sửa hồ sơ 1</p>
-                </div>
-
-                <!-- THIẾT BỊ 25: EDIT 2 (Profile) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="profile">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_profile2.jpg" class="w-full h-full object-cover" alt="Chỉnh sửa hồ sơ 2">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Chỉnh sửa hồ sơ 2</p>
-                </div>
-
-                <!-- THIẾT BỊ 26: SETTINGS 1 (Profile) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="profile">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/setting.jpg" class="w-full h-full object-cover" alt="Cài đặt chung">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Cài đặt chung</p>
-                </div>
-
-                <!-- THIẾT BỊ 27: SETTINGS 2 (Profile) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="profile">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/setting2.jpg" class="w-full h-full object-cover" alt="Cài đặt liên hệ">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Cài đặt liên hệ</p>
-                </div>
-
-                <!-- THIẾT BỊ 28: PRIVACY (Profile) -->
-                <div class="gallery-item snap-item shrink-0 w-[270px] sm:w-[290px]" data-category="profile">
-                    <div class="w-full bg-[#1e2538] p-3.5 rounded-[46px] border-[5px] border-[#333b52] shadow-2xl relative ring-1 ring-white/10 aspect-[9/19] flex flex-col cursor-pointer hover:border-brand-500/50 transition-colors" onclick="openModal(this)">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-4 bg-[#333b52] rounded-b-xl z-20"><div class="w-3 h-3 rounded-full bg-black/40 mx-auto mt-0.5"></div></div>
-                        <div class="w-full h-full rounded-[34px] overflow-hidden bg-black relative z-10">
-                            <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/privacy_setting.jpg" class="w-full h-full object-cover" alt="Bảo mật & Quyền riêng tư">
-                        </div>
-                    </div>
-                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Bảo mật & Riêng tư</p>
+                    <p class="text-xs font-semibold text-gray-400 mt-4 text-center tracking-wide">Cài đặt hệ thống</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center scroll-mt-24 w-full">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-3">📬 Liên Hệ Kết Nối</h2>
-        <p class="text-gray-400 text-xs sm:text-sm max-w-lg mx-auto mb-8">Nếu bạn có câu hỏi, đóng góp hay ý tưởng phát triển ứng dụng, hãy kết nối ngay nhé!</p>
-        
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="mailto:duymanhbui305@gmail.com" class="glass-card w-full sm:w-auto px-6 py-4 rounded-2xl flex items-center justify-center gap-3 hover:border-brand-500/40 transition-all text-sm group">
-                <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center group-hover:bg-brand-500 group-hover:text-white transition-colors">
-                    <i data-lucide="mail" class="w-4 h-4"></i>
-                </div>
-                <span class="font-medium text-gray-200 text-xs sm:text-sm">duymanhbui305@gmail.com</span>
-            </a>
-            <a href="https://github.com/dmanhz06" target="_blank" class="glass-card w-full sm:w-auto px-6 py-4 rounded-2xl flex items-center justify-center gap-3 hover:border-brand-500/40 transition-all text-sm group">
-                <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center transition-all">
-                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" class="w-5 h-5 object-contain invert" alt="GitHub Logo">
-                </div>
-                <span class="font-medium text-gray-200 text-xs sm:text-sm">github.com/dmanhz06</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="w-full border-t border-white/5 bg-gray-950/60 backdrop-blur-sm py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-            <div class="flex items-center gap-2">
-                <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" class="w-5 h-5 rounded" alt="Footer Logo">
-                <p>© 2026 SoulMate App. Crafted beautifully for Dmanhz.</p>
+    <div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-xl items-center justify-center p-4 transition-all" onclick="closeModal()">
+        <button class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors" onclick="closeModal()">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="max-w-md w-full flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+            <div class="bg-[#1e2538] p-3 rounded-[40px] border-4 border-[#333b52] shadow-2xl ring-1 ring-white/10 w-[280px] sm:w-[320px] aspect-[9/19] overflow-hidden">
+                <img id="modal-img" src="" class="w-full h-full object-cover rounded-[28px]" alt="Phóng to giao diện">
             </div>
-            <p class="text-right">Designed with Premium UX/UI Mobile Mockup Layout</p>
+            <p id="modal-caption" class="text-sm font-medium text-gray-300 mt-6 text-center tracking-wide px-4"></p>
+        </div>
+    </div>
+
+    <footer id="contact" class="w-full border-t border-white/5 bg-[#070a12] mt-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-brand-600 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" class="w-10 h-10 object-cover scale-125" alt="Footer Logo">
+                </div>
+                <span class="text-base font-bold text-white">Soul<span class="gradient-text">Mate</span></span>
+            </div>
+            <p class="text-gray-500 text-xs text-center sm:text-left">© 2026 SoulMate Project. Phát triển bởi Dmanhz.</p>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/dmanhz06" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="mailto:dmanhz06@gmail.com" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="mail" class="w-5 h-5"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- LIGHTBOX MODAL (XEM ẢNH LỚN) -->
-    <div id="lightbox" class="fixed inset-0 bg-black/95 backdrop-blur-md hidden z-50 flex-col items-center justify-center p-4" onclick="closeModal()">
-        <button class="absolute top-6 right-6 text-white/70 hover:text-white bg-white/5 p-2 rounded-full backdrop-blur">
-            <i data-lucide="x" class="w-6 h-6"></i>
-        </button>
-        <div class="max-w-xs sm:max-w-sm w-full h-[85vh] flex items-center justify-center" onclick="event.stopPropagation()">
-            <img id="modal-img" src="" class="max-w-full max-h-full object-contain rounded-[32px] shadow-2xl border border-white/10" alt="Preview">
-        </div>
-        <p id="modal-caption" class="text-white/80 text-xs sm:text-sm mt-4 font-medium tracking-wide"></p>
-    </div>
-
-    <!-- JAVASCRIPT LOGIC CHUYỂN SLIDE VÀ LỌC -->
     <script>
-        // Khởi tạo Lucide Icons
+        // Khởi tạo Lucide Icons ngay khi tải trang
         lucide.createIcons();
 
         const slider = document.getElementById('phone-slider');
 
-        // Hàm xử lý khi bấm nút mũi tên trái / phải
-        function scrollSlider(direction) {
-            // Tính toán khoảng cách dịch chuyển bằng chiều rộng của 1 phần tử thiết bị
-            const firstItem = document.querySelector('.gallery-item');
-            if (!firstItem) return;
-            const scrollAmount = (firstItem.offsetWidth + 24) * direction; // 24px tương đương khoảng cách gap-6
-            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        /**
+         * Hàm tự viết để tạo hiệu ứng cuộn mượt mà có kiểm soát thời gian (Giảm tốc độ lướt)
+         * @param {HTMLElement} element - Phần tử cần cuộn (slider)
+         * @param {number} to - Vị trí pixel đích cần cuộn đến
+         * @param {number} duration - Thời gian cuộn (ms) - Đặt 600ms giúp chuyển cảnh chậm rãi, quý phái
+         */
+        function smoothScrollTo(element, to, duration) {
+            const start = element.scrollLeft;
+            const change = to - start;
+            let currentTime = 0;
+            const increment = 20;
+            
+            function animateScroll() {
+                currentTime += increment;
+                // Áp dụng công thứceaseInOutQuad để chuyển động mượt mà ở hai đầu
+                const val = Math.easeInOutQuad(currentTime, start, change, duration);
+                element.scrollLeft = val;
+                if (currentTime < duration) {
+                    setTimeout(animateScroll, increment);
+                }
+            }
+            animateScroll();
         }
 
-        // Bộ lọc danh mục kết hợp cuộn trượt mượt mà (Filter & Auto Scroll)
-        function filterAndScroll(category) {
-            const items = document.querySelectorAll('.gallery-item');
-            const buttons = document.querySelectorAll('.filter-btn');
+        // Bổ sung hàm toán học nội suy chuyển động mượt (Math easeInOutQuad)
+        Math.easeInOutQuad = function (t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        };
+
+        // Hàm điều hướng khi click nút Chevron trái / phải
+        function scrollSlider(direction) {
+            // Xác định chiều rộng thực tế của một item để tính toán khoảng cách dịch chuyển hợp lý
+            const firstItem = slider.querySelector('.gallery-item');
+            if (!firstItem) return;
             
-            // Đổi trạng thái active hiển thị của button lọc
+            const itemWidth = firstItem.offsetWidth;
+            const gap = window.innerWidth < 640 ? 16 : 24; // Khớp với class gap-4 và gap-6
+            const step = itemWidth + gap;
+            
+            const targetScrollLeft = slider.scrollLeft + (direction * step);
+            // Thực hiện gọi hàm cuộn giảm tốc độ (thời gian chạy là 600ms thay vì mặc định vuột mất)
+            smoothScrollTo(slider, targetScrollLeft, 600);
+        }
+
+        // Bộ lọc danh mục bài viết / hình ảnh
+        function filterAndScroll(category) {
+            // Cập nhật trạng thái hiển thị Active trên các nút bộ lọc
+            const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 btn.classList.remove('bg-brand-500', 'text-white', 'shadow-lg');
                 btn.classList.add('bg-white/5', 'text-gray-400');
             });
-            
-            const activeBtn = document.getElementById(`btn-${category}`);
-            if(activeBtn) {
-                activeBtn.classList.remove('bg-white/5', 'text-gray-400');
-                activeBtn.classList.add('bg-brand-500', 'text-white', 'shadow-lg');
+
+            const currentBtn = document.getElementById(`btn-${category}`);
+            if(currentBtn) {
+                currentBtn.classList.remove('bg-white/5', 'text-gray-400');
+                currentBtn.classList.add('bg-brand-500', 'text-white', 'shadow-lg');
             }
 
-            // Ẩn / hiện phần tử khớp danh mục
+            // Thực hiện Lọc ẩn/hiện các mockup thiết bị
+            const items = document.querySelectorAll('.gallery-item');
             items.forEach(item => {
                 if (category === 'all' || item.getAttribute('data-category') === category) {
                     item.style.display = 'block';
-                    item.style.opacity = '1';
+                    setTimeout(() => item.style.opacity = '1', 50);
                 } else {
                     item.style.opacity = '0';
                     item.style.display = 'none';
                 }
             });
 
-            // Sau khi lọc, tự động cuộn thanh Slider về đầu vị trí danh mục mới
-            slider.scrollTo({ left: 0, behavior: 'smooth' });
+            // Sau khi lọc dữ liệu thành công, đưa thanh cuộn Slider về vị trí ban đầu mượt mà
+            smoothScrollTo(slider, 0, 500);
         }
 
-        // Mở ảnh phóng to chuyên nghiệp (Lightbox)
+        // Mở ảnh phóng to chuyên nghiệp (Lightbox modal)
         function openModal(element) {
             const img = element.querySelector('img');
-            const caption = element.nextElementSibling; // Lấy đoạn text miêu tả phía dưới khung hình
+            const caption = element.nextElementSibling; // Lấy miêu tả văn bản dưới chân mockup tương ứng
             
             document.getElementById('modal-img').src = img.src;
             document.getElementById('modal-caption').innerText = caption ? caption.innerText : "";
@@ -645,18 +531,18 @@
             const lightbox = document.getElementById('lightbox');
             lightbox.classList.remove('hidden');
             lightbox.classList.add('flex');
-            document.body.style.overflow = 'hidden'; // Khóa cuộn trang chính
+            document.body.style.overflow = 'hidden'; // Vô hiệu hóa tạm thời thanh cuộn trang chính
         }
 
-        // Đóng ảnh phóng to
+        // Đóng ảnh phóng to Lightbox
         function closeModal() {
             const lightbox = document.getElementById('lightbox');
             lightbox.classList.add('hidden');
             lightbox.classList.remove('flex');
-            document.body.style.overflow = 'auto'; // Mở lại cuộn trang chính
+            document.body.style.overflow = 'auto'; // Kích hoạt lại thanh cuộn trang chính
         }
 
-        // Nhấn ESC đóng hộp thoại nhanh
+        // Phím tắt ESC tiện dụng hỗ trợ thoát nhanh cửa sổ phóng to
         document.addEventListener('keydown', (e) => {
             if(e.key === 'Escape') closeModal();
         });
