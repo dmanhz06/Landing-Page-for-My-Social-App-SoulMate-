@@ -105,7 +105,4 @@
 Nếu bạn có bất kỳ câu hỏi, góp ý hay ý tưởng hợp tác phát triển ứng dụng, vui lòng liên hệ qua:
 - **Email:** [duymanhbui305@gmail.com](mailto:duymanhbui305@gmail.com)
 - **GitHub:** [https://github.com/dmanhz06](https://github.com/dmanhz06)
-- **Repository Link:** [https://github.com/dmanhz06/Dmanhz_Social_App](https://github.com/dmanhz06/Dmanhz_Social_App)
-   git clone [https://github.com/dmanhz06/Dmanhz_Social_App.git](https://github.com/dmanhz06/Dmanhz_Social_App.git)
-   cd Dmanhz_Social_App
 ---
