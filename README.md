@@ -65,11 +65,15 @@
 | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/comment_feeds.jpg" width="220" alt="Comment"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/download_img_feeds2.jpg" width="220" alt="Download Media"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/push_notifi.jpg" width="220" alt="Push Notification"> |
 
 #### 🎵 3. Góc Tâm Trạng & Âm Nhạc (Music & Journal)
-*Không gian thư giãn kết hợp trình phát nhạc trực tuyến và trình quản lý nhật ký cảm xúc theo hai chế độ giao diện sáng/tối.*
+*Không gian thư giãn kết hợp trình phát nhạc trực tuyến, quản lý, chỉnh sửa và chia sẻ nhật ký cảm xúc cá nhân.*
 
-| Trình phát nhạc (Music) | Viết nhật ký mới | Nhật ký (Chế độ Tối) | Nhật ký (Chế độ Sáng) |
+| Trình phát nhạc (Music) | Viết nhật ký mới | Chỉnh sửa nhật ký | Chia sẻ nhật ký |
 | :---: | :---: | :---: | :---: |
-| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/music.jpg" width="180" alt="Music Player"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/nhatky.jpg" width="180" alt="Write Journal"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_darkmode.jpg" width="180" alt="Journal Dark"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_lightmode.jpg" width="180" alt="Journal Light"> |
+| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/music.jpg" width="180" alt="Music Player"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/nhatky.jpg" width="180" alt="Write Journal"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_journal.jpg" width="180" alt="Edit Journal"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/share_journal.jpg" width="180" alt="Share Journal"> |
+
+| Nhật ký (Chế độ Tối) | Nhật ký (Chế độ Sáng) |
+| :---: | :---: |
+| <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_darkmode.jpg" width="180" alt="Journal Dark"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_lightmode.jpg" width="180" alt="Journal Light"> |
 
 #### 🎙️ 4. Tính Năng Ghi Âm Nhật Ký (Audio Journal)
 *Luồng tính năng tương tác bằng giọng nói: Bắt đầu, ghi âm thời gian thực, xác nhận gửi và đồng bộ hóa vào hệ thống nhật ký.*
@@ -100,9 +104,10 @@
 | :---: | :---: | :---: |
 | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/setting.jpg" width="220" alt="Settings 1"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/setting2.jpg" width="220" alt="Settings 2"> | <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/privacy_setting.jpg" width="220" alt="Privacy Settings"> |
 
+---
+
 ### 📬 Liên Hệ (Contact Me)
 
 Nếu bạn có bất kỳ câu hỏi, góp ý hay ý tưởng hợp tác phát triển ứng dụng, vui lòng liên hệ qua:
 - **Email:** [duymanhbui305@gmail.com](mailto:duymanhbui305@gmail.com)
 - **GitHub:** [https://github.com/dmanhz06](https://github.com/dmanhz06)
----
