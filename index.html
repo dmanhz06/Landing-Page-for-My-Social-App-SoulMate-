@@ -62,15 +62,15 @@
         </div>
     </nav>
 
-    <header class="relative pt-24 pb-16 md:pt-48 md:pb-32 overflow-hidden w-full">
+    <header class="relative pt-24 pb-16 md:pt-48 md:pb-32 overflow-hidden w-full max-w-full box-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
-                <div class="lg:col-span-7 text-center lg:text-left space-y-4 md:space-y-6">
+                <div class="lg:col-span-7 text-center lg:text-left space-y-4 md:space-y-6 min-w-0">
                     <div class="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 rounded-full px-3 py-1 text-[10px] md:text-xs font-semibold text-purple-400 uppercase tracking-wider">
                         <i class="fa-solid fa-sparkles"></i> Mạng xã hội thế hệ mới
                     </div>
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight md:leading-none">
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight md:leading-none break-words">
                         Kết nối tâm hồn <br>
                         <span class="gradient-text">Dmanhz SoulMate</span>
                     </h1>
@@ -111,7 +111,7 @@
         </div>
     </header>
 
-    <section id="features" class="py-16 md:py-24 bg-gray-950/40 border-y border-gray-900 w-full">
+    <section id="features" class="py-16 md:py-24 bg-gray-950/40 border-y border-gray-900 w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 space-y-3">
                 <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Đột Phá Với <span class="gradient-text">Tính Năng Khác Biệt</span></h2>
@@ -165,7 +165,7 @@
         </div>
     </section>
 
-    <section id="tech" class="py-16 md:py-24 relative w-full">
+    <section id="tech" class="py-16 md:py-24 relative w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-blue-900/20 border border-purple-500/20 rounded-2xl md:rounded-3xl p-6 sm:p-12 lg:p-16">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -212,7 +212,7 @@
         </div>
     </section>
 
-    <section id="screenshots" class="py-16 md:py-24 bg-gray-950/20 w-full overflow-hidden">
+    <section id="screenshots" class="py-16 md:py-24 bg-gray-950/20 w-full overflow-hidden max-w-full box-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4">
                 <div>
@@ -224,7 +224,7 @@
                 </div>
             </div>
 
-            <div id="tab-container" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-6 md:mb-8 border-b border-gray-900">
+            <div id="tab-container" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-6 md:mb-8 border-b border-gray-900 max-w-full">
                 <button data-target="auth" class="tab-btn px-3.5 py-1.5 md:px-4 md:py-2 text-[11px] md:text-xs font-semibold rounded-lg md:rounded-xl bg-purple-600 text-white whitespace-nowrap transition-all">🔐 Xác Thực</button>
                 <button data-target="home" class="tab-btn px-3.5 py-1.5 md:px-4 md:py-2 text-[11px] md:text-xs font-semibold rounded-lg md:rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🌐 Bảng Tin</button>
                 <button data-target="journal" class="tab-btn px-3.5 py-1.5 md:px-4 md:py-2 text-[11px] md:text-xs font-semibold rounded-lg md:rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🎵 Nhạc & Nhật ký</button>
@@ -234,130 +234,130 @@
                 <button data-target="all" class="tab-btn px-3.5 py-1.5 md:px-4 md:py-2 text-[11px] md:text-xs font-semibold rounded-lg md:rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">Tất cả</button>
             </div>
 
-            <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 max-w-full overflow-hidden box-border">
+            <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 w-full max-w-full overflow-hidden box-border">
                 
-                <div class="gallery-item auth w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item auth w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/signup.png" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Sign Up">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Màn hình Đăng ký</p>
                 </div>
-                <div class="gallery-item auth w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item auth w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/login.png" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Log In">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Màn hình Đăng nhập</p>
                 </div>
 
-                <div class="gallery-item home w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item home w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/home.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Home">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Trang chủ (Home)</p>
                 </div>
-                <div class="gallery-item home w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item home w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/feeds1.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Feeds 1">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Bảng tin (Feeds 1)</p>
                 </div>
-                <div class="gallery-item home w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item home w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/feeds2.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Feeds 2">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Bảng tin (Feeds 2)</p>
                 </div>
-                <div class="gallery-item home w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item home w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/comment_feeds.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Comment">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Tương tác bình luận</p>
                 </div>
-                <div class="gallery-item home w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item home w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/download_img_feeds2.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Download Media">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Tải ảnh từ bài đăng</p>
                 </div>
-                <div class="gallery-item home w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item home w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/push_notifi.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Push Notification">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Thông báo đẩy (Push)</p>
                 </div>
 
-                <div class="gallery-item journal w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item journal w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/music.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Music Player">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Trình phát nhạc</p>
                 </div>
-                <div class="gallery-item journal w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item journal w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/nhatky.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Write Journal">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Viết nhật ký mới</p>
                 </div>
-                <div class="gallery-item journal w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item journal w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_journal.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Edit Journal">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Chỉnh sửa nhật ký</p>
                 </div>
-                <div class="gallery-item journal w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item journal w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/share_journal.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Share Journal">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Chia sẻ nhật ký</p>
                 </div>
-                <div class="gallery-item journal w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item journal w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_darkmode.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Journal Dark">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Nhật ký (Chế độ Tối)</p>
                 </div>
-                <div class="gallery-item journal w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item journal w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_lightmode.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Journal Light">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Nhật ký (Chế độ Sáng)</p>
                 </div>
 
-                <div class="gallery-item audio w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item audio w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/start_mic.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Start Mic">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Giao diện sẵn sàng</p>
                 </div>
-                <div class="gallery-item audio w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item audio w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/record_mic.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Recording">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Đang Ghi âm (Live)</p>
                 </div>
-                <div class="gallery-item audio w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item audio w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/nhan_mic.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Action Mic">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Nhấn/Vuốt gửi dữ liệu</p>
                 </div>
-                <div class="gallery-item audio w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item audio w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/send_mic.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Send Success">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Đồng bộ thành công</p>
                 </div>
 
-                <div class="gallery-item chat w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item chat w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat_all.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Chat List">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Danh sách cuộc trò chuyện</p>
                 </div>
-                <div class="gallery-item chat w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item chat w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat1.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Chat 1">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Hộp thoại nhắn tin 1</p>
                 </div>
-                <div class="gallery-item chat w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item chat w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/chat2.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Chat 2">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Hộp thoại nhắn tin 2</p>
                 </div>
-                <div class="gallery-item chat w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item chat w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/user_chat.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="User Chat Ops">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Tùy chọn cuộc trò chuyện</p>
                 </div>
-                <div class="gallery-item chat w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item chat w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/other_profile.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Other Profile">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Hồ sơ bạn bè</p>
                 </div>
-                <div class="gallery-item chat w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item chat w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/emote.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Emote Chat">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Thả cảm xúc (Emote)</p>
                 </div>
 
-                <div class="gallery-item profile w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item profile w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/user_profile.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="User Profile">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Trang cá nhân</p>
                 </div>
-                <div class="gallery-item profile w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item profile w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_profile.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Edit Profile 1">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Chỉnh sửa hồ sơ 1</p>
                 </div>
-                <div class="gallery-item profile w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item profile w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_profile2.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Edit Profile 2">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Chỉnh sửa hồ sơ 2</p>
                 </div>
-                <div class="gallery-item profile w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item profile w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/setting.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Settings 1">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Cài đặt chung</p>
                 </div>
-                <div class="gallery-item profile w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item profile w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/setting2.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Settings 2">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Cài đặt liên hệ</p>
                 </div>
-                <div class="gallery-item profile w-full bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
+                <div class="gallery-item profile w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/privacy_setting.jpg" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Privacy Settings">
                     <p class="text-center text-[11px] font-medium text-gray-400 mt-2 mb-1">Bảo mật & Quyền riêng tư</p>
                 </div>
@@ -420,7 +420,7 @@
         let currentCategoryIndex = 0;
 
         document.addEventListener("DOMContentLoaded", () => {
-            // Khởi tạo trạng thái ban đầu ổn định
+            // Khởi tạo hiển thị mục đầu tiên ổn định
             filterGallery('auth', true);
         });
 
@@ -463,6 +463,7 @@
                 }
             });
 
+            // FIXED: New fast non-flicker rendering pipeline to ensure DOM width recalculation clears overflow
             items.forEach(item => {
                 if (isInitial) {
                     if (item.classList.contains(category)) {
@@ -473,21 +474,21 @@
                         item.classList.add('hidden');
                     }
                 } else {
-                    // Smooth non-flicker re-rendering logic optimized for heavy grids (all/profile)
                     item.style.opacity = '0';
                     item.style.transform = 'scale(0.98)';
                     
+                    // Delay execution slightly to prevent layout shifts caused by grid resizing
                     setTimeout(() => {
                         if (category === 'all' || item.classList.contains(category)) {
                             item.classList.remove('hidden');
                             setTimeout(() => {
                                 item.style.opacity = '1';
                                 item.style.transform = 'scale(1)';
-                            }, 20);
+                            }, 30);
                         } else {
                             item.classList.add('hidden');
                         }
-                    }, 100);
+                    }, 80);
                 }
             });
         }
