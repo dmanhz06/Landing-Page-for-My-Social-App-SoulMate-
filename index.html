@@ -234,7 +234,7 @@
                 <button data-target="all" class="tab-btn px-3.5 py-1.5 md:px-4 md:py-2 text-[11px] md:text-xs font-semibold rounded-lg md:rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">Tất cả</button>
             </div>
 
-            <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 w-full max-w-full overflow-hidden box-border">
+            <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 md:gap-6 w-full max-w-full overflow-hidden box-border px-0 mx-auto justify-items-center">
                 
                 <div class="gallery-item auth w-full min-w-0 bg-gray-900/40 p-1.5 md:p-2 rounded-2xl md:rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all duration-200 box-border">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/signup.png" class="w-full rounded-xl md:rounded-[22px] object-cover aspect-[9/19]" alt="Sign Up">
@@ -420,7 +420,7 @@
         let currentCategoryIndex = 0;
 
         document.addEventListener("DOMContentLoaded", () => {
-            // Khởi tạo hiển thị mục đầu tiên ổn định
+            // Khởi tạo hiển thị mặc định danh mục đầu tiên
             filterGallery('auth', true);
         });
 
@@ -463,32 +463,26 @@
                 }
             });
 
-            // FIXED: New fast non-flicker rendering pipeline to ensure DOM width recalculation clears overflow
+            // FIXED JAVASCRIPT LOGIC: Xóa bỏ hiệu ứng dịch chuyển scale quá lớn gây vỡ layout grid
             items.forEach(item => {
                 if (isInitial) {
                     if (item.classList.contains(category)) {
                         item.classList.remove('hidden');
                         item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
                     } else {
                         item.classList.add('hidden');
                     }
                 } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.98)';
-                    
-                    // Delay execution slightly to prevent layout shifts caused by grid resizing
-                    setTimeout(() => {
-                        if (category === 'all' || item.classList.contains(category)) {
-                            item.classList.remove('hidden');
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'scale(1)';
-                            }, 30);
-                        } else {
-                            item.classList.add('hidden');
-                        }
-                    }, 80);
+                    // Chuyển đổi trạng thái mượt mà thông qua ngắt quãng nhỏ, giúp trình duyệt mobile tính lại bounding-box
+                    if (category === 'all' || item.classList.contains(category)) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                        }, 20);
+                    } else {
+                        item.classList.add('hidden');
+                        item.style.opacity = '0';
+                    }
                 }
             });
         }
