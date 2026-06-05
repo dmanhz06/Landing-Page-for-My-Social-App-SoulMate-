@@ -41,10 +41,13 @@
     <div class="absolute top-[120vh] right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute top-[250vh] left-1/3 w-96 h-96 bg-pink-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0b0f19]/70 backdrop-blur-xl border-b border-gray-800/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" alt="SoulMate Logo" class="w-12 h-12 object-contain rounded-xl bg-gray-900 border border-gray-700 group-hover:scale-105 transition-transform">
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0b0f19]/80 backdrop-blur-xl border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+            
+            <a href="#" class="flex items-center gap-3 group z-50">
+                <div class="w-11 h-11 rounded-xl bg-gray-900 border border-gray-700 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" alt="SoulMate Logo" class="w-full h-full object-cover scale-125">
+                </div>
                 <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-purple-400 transition-colors">SoulMate</span>
             </a>
             
@@ -55,26 +58,26 @@
                 <a href="#contact" class="hover:text-white transition-colors">Liên hệ</a>
             </div>
 
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 z-50">
                 <a href="https://github.com/dmanhz06" target="_blank" class="hidden sm:flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-xl text-sm font-medium border border-gray-700/50 transition-all">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" alt="Github" class="w-4 h-4 invert">
                     GitHub
                 </a>
-                <button id="menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none">
-                    <i class="fa-solid fa-bars text-xl"></i>
+                <button id="menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle Menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-xl transition-transform duration-200"></i>
                 </button>
             </div>
-        </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-[#0b0f19] border-b border-gray-800 px-4 py-6 space-y-4 transition-all">
-            <a href="#features" class="block text-gray-400 hover:text-white font-medium">Tính năng</a>
-            <a href="#tech" class="block text-gray-400 hover:text-white font-medium">Công nghệ</a>
-            <a href="#screenshots" class="block text-gray-400 hover:text-white font-medium">Giao diện</a>
-            <a href="#contact" class="block text-gray-400 hover:text-white font-medium">Liên hệ</a>
-            <a href="https://github.com/dmanhz06" target="_blank" class="flex items-center justify-center gap-2 bg-gray-800 text-white py-3 rounded-xl font-medium border border-gray-700">
-                <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" alt="Github" class="w-4 h-4 invert">
-                GitHub
-            </a>
+            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-[#0b0f19] border-b border-gray-800 px-6 py-6 space-y-4 shadow-2xl z-40 flex flex-col">
+                <a href="#features" class="text-gray-400 hover:text-white font-medium py-2 border-b border-gray-900">Tính năng</a>
+                <a href="#tech" class="text-gray-400 hover:text-white font-medium py-2 border-b border-gray-900">Công nghệ</a>
+                <a href="#screenshots" class="text-gray-400 hover:text-white font-medium py-2 border-b border-gray-900">Giao diện</a>
+                <a href="#contact" class="text-gray-400 hover:text-white font-medium py-2 pb-4">Liên hệ</a>
+                <a href="https://github.com/dmanhz06" target="_blank" class="flex items-center justify-center gap-2 bg-gray-800 text-white py-3 rounded-xl font-medium border border-gray-700 w-full">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" alt="Github" class="w-4 h-4 invert">
+                    GitHub
+                </a>
+            </div>
         </div>
     </nav>
 
@@ -188,7 +191,7 @@
                     <div class="space-y-6">
                         <h2 class="text-3xl font-extrabold text-white">Nền tảng công nghệ <br><span class="gradient-text">Hiện đại & Tối ưu</span></h2>
                         <p class="text-gray-400 font-light leading-relaxed">
-                            Ứng dụng tuân thủ nghiêm ngặt mô hình kiến trúc chuẩn mạng xã hội lớn lớn như <strong>MVVM (Model-View-ViewModel)</strong> nhằm đảm bảo mã nguồn sạch, module hóa rõ ràng, dễ bảo trì và mở rộng tính năng về sau.
+                            Ứng dụng tuân thủ nghiêm ngặt mô hình kiến trúc chuẩn mạng xã hội lớn như <strong>MVVM (Model-View-ViewModel)</strong> nhằm đảm bảo mã nguồn sạch, module hóa rõ ràng, dễ bảo trì và mở rộng tính năng về sau.
                         </p>
                         <div class="border-t border-gray-800 pt-6">
                             <div class="flex items-center gap-4">
@@ -232,22 +235,22 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                 <div>
-                    <h2 class="text-3xl font-extrabold text-white">Kiệt tác <span class="gradient-text">Giao Diện Hiện Đại</span></h2>
+                    <h2 class="text-3xl font-extrabold text-white">Kiệt tác <span class="gradient-text">Giao Diện Thực Tế</span></h2>
                     <p class="text-gray-400 font-light mt-2">Bộ sưu tập hình ảnh trực quan đầy mượt mà từ các module tính năng trong hệ thống SoulMate.</p>
                 </div>
                 <div class="md:hidden flex items-center gap-2 text-xs text-gray-500 bg-gray-900/60 px-3 py-1.5 rounded-full w-max">
-                    <i class="fa-solid fa-arrows-left-right animate-pulse"></i> Vuốt ngang để xem thêm hình ảnh
+                    <i class="fa-solid fa-arrows-left-right animate-pulse"></i> Vuốt ngang hoặc nhấn nút điều hướng
                 </div>
             </div>
 
-            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-6 mb-8 border-b border-gray-900">
-                <button onclick="filterGallery('all')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-purple-600 text-white whitespace-nowrap transition-all">Tất cả</button>
-                <button onclick="filterGallery('auth')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🔐 Xác Thực</button>
-                <button onclick="filterGallery('home')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🌐 Bảng Tin</button>
-                <button onclick="filterGallery('journal')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🎵 Nhạc & Nhật ký</button>
-                <button onclick="filterGallery('audio')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🎙️ Ghi âm giọng nói</button>
-                <button onclick="filterGallery('chat')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">💬 Trò Chuyện</button>
-                <button onclick="filterGallery('profile')" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">⚙️ Cài Đặt</button>
+            <div id="tab-container" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-6 mb-8 border-b border-gray-900">
+                <button data-target="all" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-purple-600 text-white whitespace-nowrap transition-all">Tất cả</button>
+                <button data-target="auth" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🔐 Xác Thực</button>
+                <button data-target="home" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🌐 Bảng Tin</button>
+                <button data-target="journal" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🎵 Nhạc & Nhật ký</button>
+                <button data-target="audio" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🎙️ Ghi âm giọng nói</button>
+                <button data-target="chat" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">💬 Trò Chuyện</button>
+                <button data-target="profile" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">⚙️ Cài Đặt</button>
             </div>
 
             <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 transition-all duration-300">
@@ -293,6 +296,14 @@
                 <div class="gallery-item journal bg-gray-900/40 p-2 rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/nhatky.jpg" class="w-full rounded-[22px] object-cover aspect-[9/19]" alt="Write Journal">
                     <p class="text-center text-xs font-medium text-gray-400 mt-3 mb-1">Viết nhật ký mới</p>
+                </div>
+                <div class="gallery-item journal bg-gray-900/40 p-2 rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_journal.jpg" class="w-full rounded-[22px] object-cover aspect-[9/19]" alt="Edit Journal" onerror="this.src='https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_darkmode.jpg'">
+                    <p class="text-center text-xs font-medium text-gray-400 mt-3 mb-1">Chỉnh sửa nhật ký</p>
+                </div>
+                <div class="gallery-item journal bg-gray-900/40 p-2 rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/share_journal.jpg" class="w-full rounded-[22px] object-cover aspect-[9/19]" alt="Share Journal" onerror="this.src='https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_lightmode.jpg'">
+                    <p class="text-center text-xs font-medium text-gray-400 mt-3 mb-1">Chia sẻ nhật ký</p>
                 </div>
                 <div class="gallery-item journal bg-gray-900/40 p-2 rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_darkmode.jpg" class="w-full rounded-[22px] object-cover aspect-[9/19]" alt="Journal Dark">
@@ -371,6 +382,16 @@
                 </div>
 
             </div>
+
+            <div class="flex items-center justify-center gap-4 mt-12 pt-4">
+                <button onclick="navigateTab(-1)" class="w-12 h-12 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-2xl flex items-center justify-center transition-all shadow-lg active:scale-95" aria-label="Previous Category">
+                    <i class="fa-solid fa-chevron-left text-sm"></i>
+                </button>
+                <span id="nav-indicator" class="text-xs font-semibold text-gray-500 bg-gray-950 px-4 py-2 rounded-xl border border-gray-900 uppercase tracking-wider">Danh mục: Tất cả</span>
+                <button onclick="navigateTab(1)" class="w-12 h-12 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-2xl flex items-center justify-center transition-all shadow-lg active:scale-95" aria-label="Next Category">
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -401,7 +422,9 @@
     <footer class="border-t border-gray-900 bg-gray-950/80 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
             <div class="flex items-center gap-2">
-                <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" alt="SoulMate" class="w-6 h-6 object-contain rounded-md bg-gray-900">
+                <div class="w-6 h-6 rounded-md bg-gray-900 overflow-hidden flex items-center justify-center">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" alt="SoulMate Footer Logo" class="w-full h-full object-cover scale-125">
+                </div>
                 <span>&copy; 2026 Dmanhz Social App (SoulMate). All Rights Reserved.</span>
             </div>
             <div class="flex items-center gap-4">
@@ -412,38 +435,86 @@
     </footer>
 
     <script>
-        // Mobile Navigation Toggle
+        // Mobile Navigation Toggle & Icon Animation Fixes
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
 
-        menuBtn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = "fa-solid fa-bars text-xl transition-transform duration-200";
+            } else {
+                menuIcon.className = "fa-solid fa-xmark text-xl transition-transform duration-200";
+            }
         });
 
-        // Close menu when link is clicked
+        // Close menu cleanly when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && e.target !== menuBtn) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = "fa-solid fa-bars text-xl";
+            }
+        });
+
+        // Close menu when navigation link is clicked
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                menuIcon.className = "fa-solid fa-bars text-xl";
             });
         });
 
-        // Screenshots Filter Logic
+        // Global State for Gallery Filter
+        const categories = ['all', 'auth', 'home', 'journal', 'audio', 'chat', 'profile'];
+        let currentCategoryIndex = 0;
+
+        // Add event listeners to normal tab buttons dynamically
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const targetCat = e.target.getAttribute('data-target');
+                currentCategoryIndex = categories.indexOf(targetCat);
+                filterGallery(targetCat);
+            });
+        });
+
+        // Main Filtering Action
         function filterGallery(category) {
             const items = document.querySelectorAll('.gallery-item');
             const buttons = document.querySelectorAll('.tab-btn');
+            const indicator = document.getElementById('nav-indicator');
 
-            // Update Active Button Style
+            // Map internal names to readable titles for display indicator
+            const titleMap = {
+                all: 'Tất cả',
+                auth: '🔐 Xác Thực',
+                home: '🌐 Bảng Tin',
+                journal: '🎵 Nhạc & Nhật ký',
+                audio: '🎙️ Ghi âm',
+                chat: '💬 Trò Chuyện',
+                profile: '⚙️ Cài Đặt'
+            };
+
+            indicator.innerText = `Danh mục: ${titleMap[category] || category}`;
+
+            // Update Active Status styling on tab bar
             buttons.forEach(btn => {
-                btn.classList.remove('bg-purple-600', 'text-white');
-                btn.classList.add('bg-gray-900', 'text-gray-400');
+                if(btn.getAttribute('data-target') === category) {
+                    btn.classList.remove('bg-gray-900', 'text-gray-400');
+                    btn.classList.add('bg-purple-600', 'text-white');
+                    // Automatically scroll custom tab bar container to current element view location
+                    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                } else {
+                    btn.classList.remove('bg-purple-600', 'text-white');
+                    btn.classList.add('bg-gray-900', 'text-gray-400');
+                }
             });
-            event.target.classList.remove('bg-gray-900', 'text-gray-400');
-            event.target.classList.add('bg-purple-600', 'text-white');
 
-            // Filter items with visual animation
+            // Smooth fade element rendering
             items.forEach(item => {
                 item.style.opacity = '0';
-                item.style.transform = 'scale(0.95)';
+                item.style.transform = 'scale(0.96)';
                 
                 setTimeout(() => {
                     if (category === 'all' || item.classList.contains(category)) {
@@ -451,12 +522,23 @@
                         setTimeout(() => {
                             item.style.opacity = '1';
                             item.style.transform = 'scale(1)';
-                        }, 50);
+                        }, 30);
                     } else {
                         item.classList.add('hidden');
                     }
-                }, 200);
+                }, 150);
             });
+        }
+
+        // Left / Right Indicator arrows control mechanism
+        function navigateTab(direction) {
+            currentCategoryIndex += direction;
+            if (currentCategoryIndex < 0) {
+                currentCategoryIndex = categories.length - 1; // loop to end
+            } else if (currentCategoryIndex >= categories.length) {
+                currentCategoryIndex = 0; // loop back to start
+            }
+            filterGallery(categories[currentCategoryIndex]);
         }
     </script>
 </body>
