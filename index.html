@@ -51,11 +51,6 @@
                     </div>
                     <span class="text-lg md:text-xl font-extrabold tracking-tight text-white group-hover:text-purple-400 transition-colors">SoulMate</span>
                 </a>
-
-                <a href="https://github.com/dmanhz06" target="_blank" class="flex md:hidden items-center gap-1.5 bg-gray-900 text-gray-300 px-3 py-1.5 rounded-xl text-xs font-medium border border-gray-800 transition-all">
-                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" alt="Github" class="w-3.5 h-3.5 invert">
-                    GitHub
-                </a>
             </div>
             
             <div class="w-full md:w-auto flex items-center gap-5 md:gap-8 text-xs md:text-sm font-medium text-gray-400 overflow-x-auto no-scrollbar py-2 md:py-0 mt-1 md:mt-0 whitespace-nowrap scroll-smooth">
@@ -428,14 +423,14 @@
     </footer>
 
     <script>
-        // Gallery Categories State Control - 'all' moved to the very end
+        // Gallery Categories State Control
         const categories = ['auth', 'home', 'journal', 'audio', 'chat', 'profile', 'all'];
-        let currentCategoryIndex = 0; // Starts directly at index 0 ('auth')
+        let currentCategoryIndex = 0;
 
         // Document Initialization
         document.addEventListener("DOMContentLoaded", () => {
-            // Trigger filter immediately for 'auth' category on window startup
-            filterGallery('auth');
+            // Pass 'true' as the second parameter to indicate this is the initial load
+            filterGallery('auth', true);
         });
 
         // Add event listeners to normal tab buttons dynamically
@@ -443,12 +438,12 @@
             button.addEventListener('click', (e) => {
                 const targetCat = e.target.getAttribute('data-target');
                 currentCategoryIndex = categories.indexOf(targetCat);
-                filterGallery(targetCat);
+                filterGallery(targetCat, false);
             });
         });
 
         // Main Filtering Action Engine
-        function filterGallery(category) {
+        function filterGallery(category, isInitial = false) {
             const items = document.querySelectorAll('.gallery-item');
             const buttons = document.querySelectorAll('.tab-btn');
             const indicator = document.getElementById('nav-indicator');
@@ -471,8 +466,11 @@
                 if(btn.getAttribute('data-target') === category) {
                     btn.classList.remove('bg-gray-900', 'text-gray-400');
                     btn.classList.add('bg-purple-600', 'text-white');
-                    // Automatically scroll custom tab bar container to current element view location
-                    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    
+                    // Only auto-scroll the sub-tab bar inside its box, DO NOT scroll the main webpage window on load
+                    if (!isInitial) {
+                        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    }
                 } else {
                     btn.classList.remove('bg-purple-600', 'text-white');
                     btn.classList.add('bg-gray-900', 'text-gray-400');
@@ -502,11 +500,11 @@
         function navigateTab(direction) {
             currentCategoryIndex += direction;
             if (currentCategoryIndex < 0) {
-                currentCategoryIndex = categories.length - 1; // loop to end
+                currentCategoryIndex = categories.length - 1;
             } else if (currentCategoryIndex >= categories.length) {
-                currentCategoryIndex = 0; // loop back to start
+                currentCategoryIndex = 0;
             }
-            filterGallery(categories[currentCategoryIndex]);
+            filterGallery(categories[currentCategoryIndex], false);
         }
     </script>
 </body>
