@@ -42,38 +42,31 @@
     <div class="absolute top-[250vh] left-1/3 w-96 h-96 bg-pink-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 
     <nav class="fixed top-0 left-0 w-full z-50 bg-[#0b0f19]/80 backdrop-blur-xl border-b border-gray-800/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex flex-col md:flex-row items-center justify-between justify-center md:justify-between py-2 md:py-0 relative">
             
-            <a href="#" class="flex items-center gap-3 group z-50">
-                <div class="w-11 h-11 rounded-xl bg-gray-900 border border-gray-700 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
-                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" alt="SoulMate Logo" class="w-full h-full object-cover scale-125">
-                </div>
-                <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-purple-400 transition-colors">SoulMate</span>
-            </a>
-            
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-                <a href="#features" class="hover:text-white transition-colors">Tính năng</a>
-                <a href="#tech" class="hover:text-white transition-colors">Công nghệ</a>
-                <a href="#screenshots" class="hover:text-white transition-colors">Giao diện</a>
-                <a href="#contact" class="hover:text-white transition-colors">Liên hệ</a>
-            </div>
+            <div class="w-full md:w-auto flex items-center justify-between md:justify-start gap-3">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-gray-900 border border-gray-700 overflow-hidden flex items-center justify-center group-hover:scale-105 transition-transform">
+                        <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/ic_launcher_foreground.webp" alt="SoulMate Logo" class="w-full h-full object-cover scale-125">
+                    </div>
+                    <span class="text-lg md:text-xl font-extrabold tracking-tight text-white group-hover:text-purple-400 transition-colors">SoulMate</span>
+                </a>
 
-            <div class="flex items-center gap-4 z-50">
-                <a href="https://github.com/dmanhz06" target="_blank" class="hidden sm:flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-xl text-sm font-medium border border-gray-700/50 transition-all">
-                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" alt="Github" class="w-4 h-4 invert">
+                <a href="https://github.com/dmanhz06" target="_blank" class="flex md:hidden items-center gap-1.5 bg-gray-900 text-gray-300 px-3 py-1.5 rounded-xl text-xs font-medium border border-gray-800 transition-all">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" alt="Github" class="w-3.5 h-3.5 invert">
                     GitHub
                 </a>
-                <button id="menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle Menu">
-                    <i id="menu-icon" class="fa-solid fa-bars text-xl transition-transform duration-200"></i>
-                </button>
+            </div>
+            
+            <div class="w-full md:w-auto flex items-center gap-5 md:gap-8 text-xs md:text-sm font-medium text-gray-400 overflow-x-auto no-scrollbar py-2 md:py-0 mt-1 md:mt-0 whitespace-nowrap scroll-smooth">
+                <a href="#features" class="hover:text-white transition-colors py-1">Tính năng</a>
+                <a href="#tech" class="hover:text-white transition-colors py-1">Công nghệ</a>
+                <a href="#screenshots" class="hover:text-white transition-colors py-1">Giao diện</a>
+                <a href="#contact" class="hover:text-white transition-colors py-1 pr-4 md:pr-0">Liên hệ</a>
             </div>
 
-            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-[#0b0f19] border-b border-gray-800 px-6 py-6 space-y-4 shadow-2xl z-40 flex flex-col">
-                <a href="#features" class="text-gray-400 hover:text-white font-medium py-2 border-b border-gray-900">Tính năng</a>
-                <a href="#tech" class="text-gray-400 hover:text-white font-medium py-2 border-b border-gray-900">Công nghệ</a>
-                <a href="#screenshots" class="text-gray-400 hover:text-white font-medium py-2 border-b border-gray-900">Giao diện</a>
-                <a href="#contact" class="text-gray-400 hover:text-white font-medium py-2 pb-4">Liên hệ</a>
-                <a href="https://github.com/dmanhz06" target="_blank" class="flex items-center justify-center gap-2 bg-gray-800 text-white py-3 rounded-xl font-medium border border-gray-700 w-full">
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://github.com/dmanhz06" target="_blank" class="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-xl text-sm font-medium border border-gray-700/50 transition-all">
                     <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/github1.png" alt="Github" class="w-4 h-4 invert">
                     GitHub
                 </a>
@@ -238,19 +231,19 @@
                     <h2 class="text-3xl font-extrabold text-white">Kiệt tác <span class="gradient-text">Giao Diện Thực Tế</span></h2>
                     <p class="text-gray-400 font-light mt-2">Bộ sưu tập hình ảnh trực quan đầy mượt mà từ các module tính năng trong hệ thống SoulMate.</p>
                 </div>
-                <div class="md:hidden flex items-center gap-2 text-xs text-gray-500 bg-gray-900/60 px-3 py-1.5 rounded-full w-max">
-                    <i class="fa-solid fa-arrows-left-right animate-pulse"></i> Vuốt ngang hoặc nhấn nút điều hướng
+                <div class="flex items-center gap-2 text-xs text-gray-500 bg-gray-900/60 px-3 py-1.5 rounded-full w-max">
+                    <i class="fa-solid fa-arrows-left-right animate-pulse"></i> Vuốt ngang hoặc nhấn nút điều hướng danh mục
                 </div>
             </div>
 
             <div id="tab-container" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-6 mb-8 border-b border-gray-900">
-                <button data-target="all" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-purple-600 text-white whitespace-nowrap transition-all">Tất cả</button>
-                <button data-target="auth" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🔐 Xác Thực</button>
+                <button data-target="auth" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-purple-600 text-white whitespace-nowrap transition-all">🔐 Xác Thực</button>
                 <button data-target="home" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🌐 Bảng Tin</button>
                 <button data-target="journal" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🎵 Nhạc & Nhật ký</button>
                 <button data-target="audio" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">🎙️ Ghi âm giọng nói</button>
                 <button data-target="chat" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">💬 Trò Chuyện</button>
                 <button data-target="profile" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">⚙️ Cài Đặt</button>
+                <button data-target="all" class="tab-btn px-4 py-2 text-xs font-semibold rounded-xl bg-gray-900 text-gray-400 hover:text-white whitespace-nowrap transition-all">Tất cả</button>
             </div>
 
             <div id="gallery-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 transition-all duration-300">
@@ -298,11 +291,11 @@
                     <p class="text-center text-xs font-medium text-gray-400 mt-3 mb-1">Viết nhật ký mới</p>
                 </div>
                 <div class="gallery-item journal bg-gray-900/40 p-2 rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all">
-                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_journal.jpg" class="w-full rounded-[22px] object-cover aspect-[9/19]" alt="Edit Journal" onerror="this.src='https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_darkmode.jpg'">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/edit_journal.jpg" class="w-full rounded-[22px] object-cover aspect-[9/19]" alt="Edit Journal">
                     <p class="text-center text-xs font-medium text-gray-400 mt-3 mb-1">Chỉnh sửa nhật ký</p>
                 </div>
                 <div class="gallery-item journal bg-gray-900/40 p-2 rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all">
-                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/share_journal.jpg" class="w-full rounded-[22px] object-cover aspect-[9/19]" alt="Share Journal" onerror="this.src='https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/journal_lightmode.jpg'">
+                    <img src="https://raw.githubusercontent.com/dmanhz06/Landing-Page-for-My-Social-App-SoulMate-/main/screenshots/share_journal.jpg" class="w-full rounded-[22px] object-cover aspect-[9/19]" alt="Share Journal">
                     <p class="text-center text-xs font-medium text-gray-400 mt-3 mb-1">Chia sẻ nhật ký</p>
                 </div>
                 <div class="gallery-item journal bg-gray-900/40 p-2 rounded-[28px] border border-gray-800 hover:border-purple-500/30 transition-all">
@@ -387,7 +380,7 @@
                 <button onclick="navigateTab(-1)" class="w-12 h-12 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-2xl flex items-center justify-center transition-all shadow-lg active:scale-95" aria-label="Previous Category">
                     <i class="fa-solid fa-chevron-left text-sm"></i>
                 </button>
-                <span id="nav-indicator" class="text-xs font-semibold text-gray-500 bg-gray-950 px-4 py-2 rounded-xl border border-gray-900 uppercase tracking-wider">Danh mục: Tất cả</span>
+                <span id="nav-indicator" class="text-xs font-semibold text-gray-500 bg-gray-950 px-4 py-2 rounded-xl border border-gray-900 uppercase tracking-wider">Danh mục: 🔐 Xác Thực</span>
                 <button onclick="navigateTab(1)" class="w-12 h-12 bg-gray-900 hover:bg-gray-800 text-gray-400 hover:text-white border border-gray-800 rounded-2xl flex items-center justify-center transition-all shadow-lg active:scale-95" aria-label="Next Category">
                     <i class="fa-solid fa-chevron-right text-sm"></i>
                 </button>
@@ -435,40 +428,15 @@
     </footer>
 
     <script>
-        // Mobile Navigation Toggle & Icon Animation Fixes
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+        // Gallery Categories State Control - 'all' moved to the very end
+        const categories = ['auth', 'home', 'journal', 'audio', 'chat', 'profile', 'all'];
+        let currentCategoryIndex = 0; // Starts directly at index 0 ('auth')
 
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileMenu.classList.toggle('hidden');
-            if (mobileMenu.classList.contains('hidden')) {
-                menuIcon.className = "fa-solid fa-bars text-xl transition-transform duration-200";
-            } else {
-                menuIcon.className = "fa-solid fa-xmark text-xl transition-transform duration-200";
-            }
+        // Document Initialization
+        document.addEventListener("DOMContentLoaded", () => {
+            // Trigger filter immediately for 'auth' category on window startup
+            filterGallery('auth');
         });
-
-        // Close menu cleanly when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && e.target !== menuBtn) {
-                mobileMenu.classList.add('hidden');
-                menuIcon.className = "fa-solid fa-bars text-xl";
-            }
-        });
-
-        // Close menu when navigation link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.className = "fa-solid fa-bars text-xl";
-            });
-        });
-
-        // Global State for Gallery Filter
-        const categories = ['all', 'auth', 'home', 'journal', 'audio', 'chat', 'profile'];
-        let currentCategoryIndex = 0;
 
         // Add event listeners to normal tab buttons dynamically
         document.querySelectorAll('.tab-btn').forEach(button => {
@@ -479,7 +447,7 @@
             });
         });
 
-        // Main Filtering Action
+        // Main Filtering Action Engine
         function filterGallery(category) {
             const items = document.querySelectorAll('.gallery-item');
             const buttons = document.querySelectorAll('.tab-btn');
