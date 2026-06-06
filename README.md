@@ -8,6 +8,8 @@
 
 **Dmanhz Social App (SoulMate)** là một ứng dụng mạng xã hội di động hiện đại, kết hợp độc đáo giữa việc kết nối cộng đồng, không gian nghe nhạc thư giãn và góc viết nhật ký chia sẻ cảm xúc cá nhân. Dự án được tích hợp các dịch vụ đám mây tiên tiến, hệ thống quản lý dữ liệu thời gian thực và giải pháp thông báo đẩy thông minh nhằm tối ưu hóa trải nghiệm tương tác của người dùng.
 
+**Landing Page for dự án Social App (SoulMate) vì đang để private**
+
 ---
 
 ### 🌐 Web giới thiệu sản phẩm App 
